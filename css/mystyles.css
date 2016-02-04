@@ -1,0 +1,115 @@
+.row-header{
+    margin:0px auto;
+    padding:0px auto;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+.row-footer{
+    background-color: #AfAfAf;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #7986CB ;
+    color:floralwhite;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.navbar-inverse {
+     background: #303F9F;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+ .navbar-inverse .navbar-nav > .open > a:hover,
+ .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #303F9F;
+    color:#eeeeee;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
+    color:#000000;
+}
+
+/*
+
+.form-inline {
+    margin-top:9px;
+}
+
+#remember-me {
+    color: #FFFFFF;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#remember-me input {
+    margin-right: 2px;
+}
+
+.float-right {
+    float: right;
+}
+
+input[name="date"], input[name="time"] {
+    width:75%;
+}
+
+#reserve-btn {
+    margin-top: 100px;
+}
+
+#date-glyph, #time-glyph {
+    left: -25px;
+}
+
+@media all and (min-width:768px) and (max-width: 1200px) {
+    input#email, input#password {
+        width: 115px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #reserve-btn {
+        margin-top: 20px;
+    }
+}
+
+@media all and (min-width:768px) and (max-width:991px) {
+    #reserve-btn {
+        font-size: 10px;
+    }
+}
+
+*/
