@@ -69,6 +69,11 @@ body{
     padding: 10px;
 }
 
+.affix {
+  top: 100px;
+}
+
+
 /*
 
 .form-inline {
