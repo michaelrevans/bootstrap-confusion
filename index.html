@@ -21,24 +21,7 @@
     <![endif]-->
 
     <style type="text/css">
-    /*
-.form-inline {margin-top:9px;}
-#remember-me {color:#FFFFFF;margin-left:4px;margin-right:4px;}
-#remember-me input {margin-right:2px;}
-input[name="date"], input[name="time"] {width:75%;}
-#reserve-btn {margin-top:100px;}
-#date-glyph, #time-glyph {left:-25px;}
-@media all and (min-width:768px) and (max-width: 1200px) {
-    input#email, input#password {width:115px;}
-}
-@media all and (max-width:768px) {
-    #reserve-btn {margin-top:20px;}
-}
-
-@media all and (min-width:768px) and (max-width:991px) {
-    #reserve-btn {font-size:10px;}
-}
-*/
+    .has-feedback span {left: -25px;}
     </style>
 
 
@@ -130,7 +113,7 @@ input[name="date"], input[name="time"] {width:75%;}
                     <img src="img/logo.png" class="img-responsive">
                 </div>
                 <div class="col-xs-12 col-sm-2">
-                  <a type="button" class="btn btn-warning btn-block" data-toggle="tooltip" title="Or Call us at +852 12345678" id="reserve-btn" data-placement="bottom" href="#reserve-form">Reserve Table</button></a>
+                  <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserve-form" id="reserve-btn">Reserve Table</button></a>
                 </div>
             </div>
         </div>
@@ -264,16 +247,22 @@ input[name="date"], input[name="time"] {width:75%;}
         </div>
       -->
       <!-- old content end -->
-
-        <div class="row row-content" id="reserve-form">
-            <div class="col-xs-12 col-sm-3">
-                <p style="padding:20px;"></p>
-                <h3 align=center>Reserve a Table</h3>
+      <div class="modal fade" tabindex="-1" role="dialog" id="reserve-form">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 class="modal-title" id="blah-blah">Reserve a Table</h3>
             </div>
-            <div class="col-xs-12 col-sm-9">
+
+
+
+
+
+            <div class="modal-body">
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label class="control-label col-sm-3">Number of Guests</label>
+                        <label class="control-label col-sm-2">Number of Guests</label>
                         <div class="col-sm-9">
                             <label class="radio-inline"><input type="radio" name="guests">1</label>
                             <label class="radio-inline"><input type="radio" name="guests">2</label>
@@ -284,21 +273,33 @@ input[name="date"], input[name="time"] {width:75%;}
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-3">Date &amp; Time</label>
-                        <div class="col-sm-4">
-                            <input type="date" name="date" placeholder="Date"><span class="glyphicon glyphicon-calendar" id="date-glyph"></span>
+                      <label class="control-label col-xs-2">Section</label>
+                      <div class="btn-group col-xs-10" role="group" data-toggle="buttons">
+                        <label for="smoking" class="btn btn-success active">
+                          <input type="radio" value="Non Smoking" name="smoking">Non Smoking
+                        </label>
+                        <label for="smoking" class="btn btn-danger">
+                          <input type="radio" value="moking" name="smoking">Smoking
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-2">Date &amp; Time</label>
+                        <div class="col-xs-5 has-feedback">
+                            <input type="date" name="date" placeholder="Date"><span class="glyphicon glyphicon-calendar"></span>
                         </div>
-                        <div class="col-sm-4">
-                            <input type="time" name="time" placeholder="Time"><span class="glyphicon glyphicon-time" id="time-glyph"></span>
+                        <div class="col-xs-5 has-feedback">
+                            <input type="time" name="time" placeholder="Time"><span class="glyphicon glyphicon-time"></span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-xs-1 col-xs-offset-3">
+                        <div class="col-xs-6 col-xs-offset-2">
                             <button class="btn btn-primary">Reserve</button>
+                            <button class="btn btn-default">Cancel</button>
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="col-xs-8 col-xs-offset-1">
+                        <div class="col-xs-12">
                             <div class="alert alert-warning alert-dismissable" role="alert">
                                 <strong>Warning</strong>: Please <a class="alert-link" href="tel:+85287654321">call</a> us to reserve for more than six guests.
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -307,8 +308,8 @@ input[name="date"], input[name="time"] {width:75%;}
                     </div>
                 </form>
             </div>
+          </div>
         </div>
-
     </div>
 
     <footer class="row-footer">
@@ -350,29 +351,17 @@ input[name="date"], input[name="time"] {width:75%;}
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+</script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="js/myjavascript.js" type="text/javascript"></script> -->
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-    });
-$(document).ready(function() {
-    $('[name="date"]').hover(function() {
-        $('#date-glyph').hide();
-    }, function() {
-        $('#date-glyph').show();
-    });
-});
-$(document).ready(function() {
-    $('[name="time"]').hover(function() {
-        $('#time-glyph').hide();
-    }, function() {
-        $('#time-glyph').show();
-    });
+<script src="js/bootstrap.min.js">
+</script>
+<!-- <script src="js/myjavascript.js" type="text/javascript"></script> -->
+<script type="text/javascript">
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
 });
 </script>
 </body>

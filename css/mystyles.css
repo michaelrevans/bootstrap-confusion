@@ -90,48 +90,6 @@ body{
     min-height: 300px;
 }
 
-/*
-
-.form-inline {
-    margin-top:9px;
+.has-feedback span {
+  left: -25px;
 }
-
-#remember-me {
-    color: #FFFFFF;
-    margin-left: 4px;
-    margin-right: 4px;
-}
-
-#remember-me input {
-    margin-right: 2px;
-}
-
-input[name="date"], input[name="time"] {
-    width:75%;
-}
-
-
-
-#date-glyph, #time-glyph {
-    left: -25px;
-}
-
-@media all and (min-width:768px) and (max-width: 1200px) {
-    input#email, input#password {
-        width: 115px;
-    }
-}
-
-@media all and (max-width: 768px) {
-    #reserve-btn {
-        margin-top: 20px;
-    }
-}
-
-@media all and (min-width:768px) and (max-width:991px) {
-    #reserve-btn {
-        font-size: 10px;
-    }
-}
-
-*/
