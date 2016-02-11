@@ -73,6 +73,9 @@ body{
   top: 100px;
 }
 
+#reserve-btn {
+    margin-top: 100px;
+}
 
 /*
 
@@ -90,17 +93,11 @@ body{
     margin-right: 2px;
 }
 
-.float-right {
-    float: right;
-}
-
 input[name="date"], input[name="time"] {
     width:75%;
 }
 
-#reserve-btn {
-    margin-top: 100px;
-}
+
 
 #date-glyph, #time-glyph {
     left: -25px;
