@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-confusion",
+  "homepage": "https://github.com/michaelrevans/bootstrap-confusion",
+  "authors": [
+    "Michael Evans <michaelrevans@live.co.uk>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0"
+  }
+}
